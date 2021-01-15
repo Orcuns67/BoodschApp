@@ -1,0 +1,15 @@
+<div class="form-group">
+    <label for="exampleInputEmail1">Enter your todo item</label>
+    <input [(ngModel)]="addTodo" type="text" class="form-control">
+    <small id="emailHelp" class="form-text text-muted">What a magnificent small angular todo app....</small>
+    <small id="emailHelp" class="form-text text-muted"><br><b>{{notification}}</b></small>
+  </div>
+  
+<button (click)="addNewTodo()" class="btn btn-primary mb-3 mt-3">New todo item</button>
+
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let todo of todos ; let i = index" class="list-group-item">
+        <span (click)="deleteTodo(i)" class="oi oi-circle-x" style="color:red"></span> {{todo.todoitem}}</li>
+    </ul>
+  </div>
