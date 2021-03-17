@@ -4,8 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { TodoComponent } from './todo/todo.component';
-import { TodoService } from './shared/services/todo.service';
+import { GroceryComponent } from './grocery/grocery.component';
+import { GroceryService } from './shared/services/grocery.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -13,7 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent
+    GroceryComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,7 @@ import { ToastrModule } from 'ngx-toastr';
     }),
   ],
   providers: [
-    TodoService
+    GroceryService
   ],
   bootstrap: [AppComponent]
 })

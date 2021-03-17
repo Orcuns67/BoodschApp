@@ -1,5 +1,5 @@
 {
-  "name": "todo",
+  "name": "grocery",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "json-server": "json-server --watch src/assets/data/todos.json"
+    "json-server": "json-server --watch src/assets/data/grocerys.json"
   },
   "private": true,
   "dependencies": {
