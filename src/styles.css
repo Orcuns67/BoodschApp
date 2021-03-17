@@ -36,3 +36,6 @@ input.form-control {
 .card {
     border: none;
 }
+input.updateTodo {
+    border: none;
+}

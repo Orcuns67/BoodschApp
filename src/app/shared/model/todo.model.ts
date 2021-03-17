@@ -1,7 +1,7 @@
 export class Todo {
     constructor(
         public id: number,
-        public todoitem: string,
+        public name: string,
         public status:boolean
     )
     {}

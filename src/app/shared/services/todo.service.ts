@@ -1,32 +1,41 @@
 import { Injectable } from '@angular/core';
 import { Todo } from '../model/todo.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
 @Injectable()
 export class TodoService {
-    private todos = [
-        new Todo (1,'item1', true),
-        new Todo (2,'item2',true)
-    ];
+constructor(private http: HttpClient){}
+url:string = "https://massimo-dn-cors.herokuapp.com/https://syntra.terugsamen.be/swisskebabs/public/api/todos";
 
-    // in mijn services ga ik intensief gebruik maken jargon benamingen.
-    // nl.. getters en setters
-
-    // wil een methode om alle todo's op te vragen
-    getTodos():Todo[]{
-        return this.todos;
+    getTodos(): Observable<Todo[]> {
+        return this.http
+            .get<Todo[]>(this.url)
+            .pipe(
+                tap (result => console.log('Via onze eigen API:', result))
+            )
+    }
+    getTodo(id:number) {
+        console.log(id);
+        return this.http
+        .get<Todo>(this.url+'/'+id)
+        .pipe()
     }
 
-    // een methode om details van 1 todo op te vragen...
-    getTodo(id:number):Todo{
-        return this.todos.find(t => t.id === id);
+    addTodo(newTodo:Todo): Observable<any> {
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.post(this.url,newTodo,{headers:headers});
     }
 
-    addTodo (todoName:string) {
-        let newTodo = new Todo(
-            this.todos.length+1,
-            todoName,
-            true
-        );
-        this.todos.push(newTodo);
+    updateTodo(newTodo:Todo): Observable<any> {
+        const headers = new HttpHeaders().set('Content-Type', 'application/json');
+        return this.http.put(this.url+'/'+newTodo.id,newTodo, {headers:headers});
+    }
+
+
+    deleteTodo(id: number){
+        return this.http.delete(this.url+'/'+id);
     }
     
 }
