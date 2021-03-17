@@ -13,14 +13,14 @@
 
 <button (click)="addNewGrocery()" class="btn btn-primary mb-3 mt-3">Nieuwe boodschappen toevoegen</button>
 
-<div *ngIf="(grocery$ | async) as grocery"class="card p-2 mb-2" style="width: 18rem;">
+<div *ngIf="(Grocery$ | async) as grocery"class="card p-2 mb-2" style="width: 18rem;">
 {{grocery.status}} - {{grocery.name}}
 </div>
 
   <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
       <!-- Met de async pipe, onze observable gaan uitlezen in real time -->
-      <li *ngFor="let grocery of grocerys$ | async" class="list-group-item">
+      <li *ngFor="let grocery of Grocerys$ | async" class="list-group-item">
         <span (click)="deleteGrocery(grocery.id)" class="oi oi-circle-x" style="color:red"></span>
         <!-- <span (click)="getgrocery(grocery.id)">  -->
           <!-- {{grocery.id | currency:'EUR'}}  -->

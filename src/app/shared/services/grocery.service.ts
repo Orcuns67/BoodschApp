@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class GroceryService {
 constructor(private http: HttpClient){}
-url:string = "https://massimo-dn-cors.herokuapp.com/https://syntra.terugsamen.be/swisskebabs/public/api/Grocerys";
+url:string = "https://massimo-dn-cors.herokuapp.com/https://syntra.terugsamen.be/swisskebabs/public/api/grocerys";
 
     getGrocerys(): Observable<Grocery[]> {
         return this.http
