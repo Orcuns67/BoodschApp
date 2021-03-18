@@ -1,40 +1,40 @@
 import { Injectable } from '@angular/core';
-import { Grocery } from '../model/grocery.model';
+import { Groc } from '../model/groc.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class GroceryService {
+export class GrocService {
 constructor(private http: HttpClient){}
-url:string = "https://massimo-dn-cors.herokuapp.com/https://syntra.terugsamen.be/swisskebabs/public/api/grocerys";
+url:string = "https://massimo-dn-cors.herokuapp.com/https://syntra.terugsamen.be/swisskebabs/public/api/grocs";
 
-    getGroceries(): Observable<Grocery[]> {
+    getGrocs(): Observable<Groc[]> {
         return this.http
-            .get<Grocery[]>(this.url)
+            .get<Groc[]>(this.url)
             .pipe(
                 tap (result => console.log('onze API:', result))
             )
     }
-    getGrocery(id:number) {
+    getGroc(id:number) {
         console.log(id);
         return this.http
-        .get<Grocery>(this.url+'/'+id)
+        .get<Groc>(this.url+'/'+id)
         .pipe()
     }
 
-    addGrocery(newGrocery:Grocery): Observable<any> {
+    addGroc(newGroc:Groc): Observable<any> {
         const headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this.http.post(this.url,newGrocery,{headers:headers});
+        return this.http.post(this.url,newGroc,{headers:headers});
     }
 
-    updateGrocery(newGrocery:Grocery): Observable<any> {
+    updateGroc(newGroc:Groc): Observable<any> {
         const headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this.http.put(this.url+'/'+newGrocery.id,newGrocery, {headers:headers});
+        return this.http.put(this.url+'/'+newGroc.id,newGroc, {headers:headers});
     }
 
 
-    deleteGrocery(id: number){
+    deleteGroc(id: number){
         return this.http.delete(this.url+'/'+id);
     }
     

@@ -1,5 +1,5 @@
 {
-  "name": "grocery",
+  "name": "groc",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "json-server": "json-server --watch src/assets/data/grocerys.json"
+    "json-server": "json-server --watch src/assets/data/groc.json"
   },
   "private": true,
   "dependencies": {
