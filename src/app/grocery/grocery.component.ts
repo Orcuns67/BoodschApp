@@ -15,7 +15,7 @@ export class GroceryComponent implements OnInit {
   statusGrocery:boolean = false;
   notification:string;
   // ASYNC CONCEPT GEBRUIKEN: Converteren van grocerys naar een observable (vergeet de import niet boven)
-  Grocerys$:Observable<Grocery[]>;
+  Groceries$:Observable<Grocery[]>;
   Grocery$:Observable<Grocery>;
 
   constructor(
@@ -31,7 +31,7 @@ export class GroceryComponent implements OnInit {
   ngOnInit(): void {
    // de observable gaan opvullen met de methode uit de service...
 
-   this.Grocerys$ = this.groceryService.getGrocerys();
+   this.Groceries$ = this.groceryService.getGroceries();
   }
 
   getGrocery(id: number){
@@ -44,7 +44,7 @@ export class GroceryComponent implements OnInit {
     this.groceryService.addGrocery(newGrocery)
     .subscribe(data => console.log(data));
     // nieuwe toto's terug auto ophalen na post
-    this.Grocerys$ = this.groceryService.getGrocerys();
+    this.Groceries$ = this.groceryService.getGroceries();
   }
 
   updateGrocery(id: number, name: string) {
@@ -52,7 +52,7 @@ export class GroceryComponent implements OnInit {
    // het grote verschil met de addNew, is dat we hier ook de id kennen en meegeven in ons object...
    const newGrocery = new Grocery(id, name, true);
    this.groceryService.updateGrocery(newGrocery).subscribe(data => console.log(data));
-   this.Grocerys$ = this.groceryService.getGrocerys();
+   this.Groceries$ = this.groceryService.getGroceries();
   }
 
   deleteGrocery(id: number){
