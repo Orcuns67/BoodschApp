@@ -1,11 +1,12 @@
 body {
-    background-color: #E91E63;
+   
 }
 h1 {
     font-weight: 100;
     color: white;
     font-size: 40px;
 }
+
 
 label {
     color: white;
@@ -20,8 +21,8 @@ small#emailHelp {
 }
 
 button.btn.btn-primary {
-    background-color: #ff428a;
-    border-color: #ff619d;
+    background-color: red;
+    border-color: red;
     font-weight: 200;
 }
 
@@ -35,3 +36,8 @@ input.form-control {
 .card {
     border: none;
 }
+
+
+
+
+
