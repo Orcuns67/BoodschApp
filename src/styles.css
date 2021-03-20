@@ -1,37 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: #E91E63;
+    background: linear-gradient(#141c96, #57447e, #5c2525);
+    margin-bottom: 600px;
 }
+
 h1 {
     font-weight: 100;
     color: white;
-    font-size: 40px;
+    font-size: 60px;
+    
 }
+
+.phone-logo {
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 108px;
+}
+
 
 label {
     color: white;
+    
 }
 
 small#emailHelp {
     color: white;
+    
 }
 
 small#emailHelp {
     color: #ffffff54!important;
 }
 
-button.btn.btn-primary {
-    background-color: #ff428a;
+button.btn.btn-primary:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background: #5c2525;
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    /*background-color: black;
     border-color: #ff619d;
-    font-weight: 200;
+    /*font-weight: 200;*/
+    
+
 }
 
 li.list-group-item {
     padding: 15px;
     background-color: #e91e6300;
+    
 }
 input.form-control {
     width: 290px;
+    
 }
 .card {
     border: none;
@@ -39,3 +64,8 @@ input.form-control {
 input.updateGroc {
     border: none;
 }
+
+.col {
+    margin-left: 500px;
+}
+
