@@ -57,7 +57,7 @@ export class GrocComponent implements OnInit {
 
   deleteGroc(id: number){
      this.grocService.deleteGroc(id).subscribe(data => console.log(data));
-     this.toastr.success('Great', 'Another item done!');
+     this.toastr.success('Product verwijdert');
   }
 
 }
