@@ -1,4 +1,5 @@
-<div class="form-group">
+<div class="kader" style="border-style: solid; width: 50%; height: 100%;">
+  <div class="form-group">
     <label for="exampleInputEmail1">Voeg je boodschappen toe</label>
     <input [(ngModel)]="addGroc" type="text" class="form-control">
 
@@ -11,11 +12,11 @@
     <label class="form-check-label" for="exampleCheck1">Aanvinken voor 'Belangrijk'</label>
   </div>
 
-<button (click)="addNewGroc()" class="btn btn-primary mb-3 mt-3">Nieuwe boodschappen toevoegen</button>
+ <button (click)="addNewGroc()" class="btn btn-primary mb-3 mt-3">Nieuwe boodschappen toevoegen</button>
 
-<div *ngIf="(Groc$ | async) as groc"class="card p-2 mb-2" style="width: 18rem;">
-{{groc.status}} - {{groc.name}}
-</div>
+ <div *ngIf="(Groc$ | async) as groc"class="card p-2 mb-2" style="width: 18rem;">
+  {{groc.status}} - {{groc.name}}
+ </div>
 
   <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
@@ -31,3 +32,4 @@
       </li>
     </ul>
   </div>
+</div>

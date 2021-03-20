@@ -1,4 +1,5 @@
 body {
+    
    
 }
 h1 {
@@ -35,6 +36,11 @@ input.form-control {
 }
 .card {
     border: none;
+}
+
+.kader {
+    border-style: 10px;
+    border-color: black;
 }
 
 
