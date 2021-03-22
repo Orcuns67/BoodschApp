@@ -1,6 +1,6 @@
 body {
-    
-   
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 12px;
 }
 h1 {
     font-weight: 100;
@@ -39,8 +39,6 @@ input.form-control {
     border: none;
 }
 
-
-
 input.updateGroc {
     border: none;
     margin-left: 15px;
@@ -49,3 +47,8 @@ svg.bi.bi-award {
     float: right;
 }
 
+.form-check {
+    float: none !important;
+    margin-left: 50%;
+    margin-right: 50%;
+}
