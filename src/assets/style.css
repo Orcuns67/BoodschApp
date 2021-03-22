@@ -44,3 +44,10 @@ input.form-control {
     border-color: black;
 }
 
+input.updateGroc {
+    border: none;
+    margin-left: 15px;
+}
+svg.bi.bi-award {
+    float: right;
+}
