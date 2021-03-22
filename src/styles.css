@@ -67,6 +67,11 @@ input.updateGroc {
     border: none;
 }
 
+.belangrijk {
+    font-size: 55px;
+    background-color: red;
+}
+
 .col {
     margin-left: 500px;
 }
