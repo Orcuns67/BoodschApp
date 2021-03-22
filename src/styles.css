@@ -3,6 +3,7 @@ body {
     background-image: url(assets/img/676126.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    align-items: center;
 }
 
 h1 {
@@ -34,7 +35,7 @@ small#emailHelp {
 .btn.btn-primary {
     color: rgb(255, 255, 255);
     background: teal;
-    border-color: #0dcaf0;
+    border-color:#3db19e;
 }
 
 button.btn.btn-primary:hover {
@@ -86,7 +87,14 @@ input.updateGroc {
     display: inline-block;
     border-color:#00ffd794;
     padding: 10px;
+    margin-left: 50%;
     
 }
 
-
+.logo67 {
+    height: 50%;
+    margin-left: 50%;
+    width: 24%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
