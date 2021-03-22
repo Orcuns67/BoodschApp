@@ -29,7 +29,7 @@ export class GrocComponent implements OnInit {
    }
 
   ngOnInit(): void {
-   // de observable gaan opvullen met de methode uit de service...
+   // de observable gaan opvullen met de methode uit de service.
 
    this.Grocs$ = this.grocService.getGrocs();
   }
@@ -43,13 +43,13 @@ export class GrocComponent implements OnInit {
     const newGroc = new Groc(null, this.addGroc, this.statusGroc);
     this.grocService.addGroc(newGroc)
     .subscribe(data => console.log(data));
-    // nieuwe toto's terug auto ophalen na post
+    // nieuwe boodschappen terug auto ophalen na post
     this.Grocs$ = this.grocService.getGrocs();
   }
 
   updateGroc(id: number, name: string) {
    // console.log(id,name);
-   // het grote verschil met de addNew, is dat we hier ook de id kennen en meegeven in ons object...
+   // Hier kennen we de id en geven we deze mee in ons object.
    const newGroc = new Groc(id, name, true);
    this.grocService.updateGroc(newGroc).subscribe(data => console.log(data));
    this.Grocs$ = this.grocService.getGrocs();

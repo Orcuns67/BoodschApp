@@ -3,6 +3,7 @@
     <label for="exampleInputEmail1">Voeg je boodschappen toe</label>
     <input [(ngModel)]="addGroc" type="text" class="form-control">
 
+
     <small id="emailHelp" class="form-text text-muted">Boodschappen lijst</small>
     <small id="emailHelp" class="form-text text-muted"><br><b>{{notification}}</b></small>
   </div>
@@ -13,6 +14,8 @@
   </div>
 
  <button (click)="addNewGroc()" class="btn btn-primary mb-3 mt-3">Nieuwe boodschappen toevoegen</button>
+ <div *ngIf="statusGroc"
+ ></div>
 
  <div *ngIf="(Groc$ | async) as groc"class="card p-2 mb-2" style="width: 18rem;">
   {{groc.status}} - {{groc.name}}
@@ -26,7 +29,7 @@
         <!-- <span (click)="getgroc(groc.id)">  -->
           <!-- {{groc.id | currency:'EUR'}}  -->
           <input type="text" #updateVolgende (blur)="updateGroc(groc.id,updateVolgende.value)" class="updateGroc" value="{{groc.name}}">
-          
+        
         <!-- </span> -->
       
       </li>
