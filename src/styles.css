@@ -1,26 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-image: url(assets/img/background4.jpg);
-    background-size: 150%;
-    margin-bottom: 600px;
+    background-image: url(assets/img/676126.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 h1 {
-    font-weight: 100;
-    color: white;
-    font-size: 60px;
+
+    color: rgb(237, 243, 238);
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
 
 .phone-logo {
-    height: 100px;
-    margin-top: 10px;
-    margin-left: 108px;
 }
 
 
 label {
-    color: white;
+    color: rgb(0, 0, 0);
     
 }
 
@@ -35,12 +33,12 @@ small#emailHelp {
 
 button.btn.btn-primary:hover {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    background: #5c2525;
-    padding: 15px 40px;
+    color: rgb(255, 255, 255);
+    background: teal;
+    
     border-radius: 4px;
     font-weight: normal;
-    text-transform: uppercase;
+    
     transition: all 0.2s ease-in-out;
     border: none;
     /*background-color: black;
@@ -73,12 +71,18 @@ input.updateGroc {
 }
 
 .col {
-    margin-left: 500px;
+    margin-left: 40%;
+    
 }
 
 .kader {
-    border-style: 10px;
-    border-color: black;
+    border-width: 15px;
+    border-radius: 3px;
+    border: solid;
+    display: inline-block;
+    color:rgba(59, 57, 57, 0.562);
+    padding: 10px;
+    background-color: whitesmoke;
 }
 
 
