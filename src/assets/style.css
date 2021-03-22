@@ -29,7 +29,8 @@ button.btn.btn-primary {
 
 li.list-group-item {
     padding: 15px;
-    background-color: #e91e6300;
+    background-color: #000000;
+    
 }
 input.form-control {
     width: 290px;
@@ -42,8 +43,4 @@ input.form-control {
     border-style: 10px;
     border-color: black;
 }
-
-
-
-
 

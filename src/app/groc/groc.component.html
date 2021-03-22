@@ -20,16 +20,18 @@
 
   <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
+      <div *ngIf="statusGroc">
       <!-- Met de async pipe, onze observable gaan uitlezen in real time -->
       <li *ngFor="let groc of Grocs$ | async" class="list-group-item">
         <span (click)="deleteGroc(groc.id)" class="oi oi-circle-x" style="color:red"></span>
         <!-- <span (click)="getgroc(groc.id)">  -->
           <!-- {{groc.id | currency:'EUR'}}  -->
+
           <input type="text" #updateVolgende (blur)="updateGroc(groc.id,updateVolgende.value)" class="updateGroc" value="{{groc.name}}">
-          
+
         <!-- </span> -->
-      
       </li>
+    </div>
     </ul>
   </div>
 </div>
